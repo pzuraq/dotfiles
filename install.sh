@@ -10,7 +10,7 @@ then
 fi
 
 # Install NVM
-if test ! $(which nvm)
+if test ! $(command -v nvm)
 then
   echo "  Installing NVM for you."
 

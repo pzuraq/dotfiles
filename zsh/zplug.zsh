@@ -29,7 +29,7 @@ if ! zplug check --verbose; then
     fi
 fi
 
-source "$HOME/.dotfiles/profile.zsh"
+source "$HOME/.dotfiles/zsh/zprofile.zsh"
 
 # Then, source plugins and add commands to $PATH
 zplug load
