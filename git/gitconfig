@@ -1,0 +1,24 @@
+[user]
+        name = Christopher Garrett
+        email = me@pzuraq.com
+[credential]
+        helper = osxkeychain
+[core]
+        editor = vim
+        excludesfile = /Users/pzuraq/.gitignore
+[alias]
+        co = checkout
+        br = branch
+        ci = commit
+        st = status
+[hub]
+        protocol = https
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
+[filter "lfs"]
+        smudge = git-lfs smudge --skip %f
+[url "https://pzuraq@"]
+        insteadOf = git://git@

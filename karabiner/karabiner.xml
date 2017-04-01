@@ -1,0 +1,545 @@
+<?xml version="1.0"?>
+<root>
+
+<appdef>
+  <appname>SLACK</appname>
+  <equal>com.tinyspeck.slackmacgap</equal>
+</appdef>
+
+<item>
+  <name>Remap Capslock to Hyper</name>
+  <appendix>OS X doesn't have a Hyper. This maps Capslock to a new modifier, Hyper</appendix>
+
+  <identifier>space_cadet.caps_to_hyper</identifier>
+
+  <!-- Remap Capslock to Hyper -->
+
+  <autogen>
+    --KeyOverlaidModifier--
+    KeyCode::F19,
+
+    KeyCode::FN,
+    KeyCode::ESCAPE
+  </autogen>
+
+  <!-- Hyper Navigation, jump by word -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::J,
+    ModifierFlag::FN | ModifierFlag::COMMAND_L,
+
+    KeyCode::CURSOR_LEFT,
+    ModifierFlag::OPTION_L
+  </autogen>
+  <autogen>
+    --KeyToKey--
+    KeyCode::K,
+    ModifierFlag::FN | ModifierFlag::COMMAND_L,
+
+    KeyCode::PAGEDOWN
+  </autogen>
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::L,
+    ModifierFlag::FN | ModifierFlag::COMMAND_L,
+
+    KeyCode::PAGEUP
+  </autogen>
+  <autogen>
+    --KeyToKey--
+    KeyCode::SEMICOLON,
+    ModifierFlag::FN | ModifierFlag::COMMAND_L,
+
+    KeyCode::CURSOR_RIGHT,
+    ModifierFlag::OPTION_L
+  </autogen>
+
+  <!-- Hyper Navigation, normal arrows -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::J,
+    ModifierFlag::FN,
+
+    KeyCode::CURSOR_LEFT
+  </autogen>
+  <autogen>
+    --KeyToKey--
+    KeyCode::K,
+    ModifierFlag::FN,
+
+    KeyCode::CURSOR_DOWN
+  </autogen>
+  <autogen>
+    --KeyToKey--
+    KeyCode::L,
+    ModifierFlag::FN,
+
+    KeyCode::CURSOR_UP
+  </autogen>
+  <autogen>
+    --KeyToKey--
+    KeyCode::SEMICOLON,
+    ModifierFlag::FN,
+
+    KeyCode::CURSOR_RIGHT
+  </autogen>
+
+  <!-- Hyper Mission Control -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::Q,
+    ModifierFlag::FN,
+
+    KeyCode::CURSOR_UP,
+    ModifierFlag::CONTROL_L
+  </autogen>
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::W,
+    ModifierFlag::FN,
+
+    KeyCode::CURSOR_LEFT,
+    ModifierFlag::CONTROL_L
+  </autogen>
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::E,
+    ModifierFlag::FN,
+
+    KeyCode::CURSOR_RIGHT,
+    ModifierFlag::CONTROL_L
+  </autogen>
+
+
+  <!-- Hyper delete -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::QUOTE,
+    ModifierFlag::FN | ModifierFlag::COMMAND_L,
+
+    KeyCode::DELETE,
+    ModifierFlag::OPTION_L
+  </autogen>
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::QUOTE,
+    ModifierFlag::FN | ModifierFlag::SHIFT_L,
+
+    KeyCode::DELETE,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::QUOTE,
+    ModifierFlag::FN,
+
+    KeyCode::DELETE
+  </autogen>
+</item>
+
+
+<item>
+  <name>Dvorak Shortcuts</name>
+  <appendix>Remap standard shortcuts to Dvorak</appendix>
+
+  <identifier>space_cadet.dvorak_shortcuts</identifier>
+
+  <!-- Cut, Copy, Paste -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::X,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::B,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::C,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::I,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::V,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::DOT,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <!-- Save  -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::S,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::SEMICOLON,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <!-- Find -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::F,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::Y,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <!-- Close and Quit -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::Q,
+    ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L,
+
+    KeyCode::COMMA,
+    ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
+  </autogen>
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::Q,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::COMMA,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <!-- Undo/Redo -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::Z,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::SLASH,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <!-- Reload -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::R,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::O,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <!-- Brackets (For changing tabs) -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::W,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::MINUS,
+    ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L
+  </autogen>
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::E,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::EQUAL,
+    ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_L
+  </autogen>
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::BRACKET_LEFT,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::MINUS,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::BRACKET_RIGHT,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::EQUAL,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <!-- Open Tab -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::T,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::K,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <!-- New Window -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::N,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::L,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <!-- Command D (usually duplicate a line, or multi-select) -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::D,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::H,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <!-- Command Slash -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::SLASH,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::BRACKET_LEFT,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <!-- Command I -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::I,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::G,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <!-- Command B -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::B,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::N,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <!-- Command G -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::G,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::U,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <!-- Command H -> Command J (because Hide is useless)-->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::H,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::C,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+  <!-- Command O -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::O,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::S,
+    ModifierFlag::COMMAND_L
+  </autogen>
+</item>
+
+<item>
+  <name>Dvorak Fuzzy Finder</name>
+  <appendix>Remap the fuzzy finder (command P)</appendix>
+
+  <not>SLACK</not>
+
+  <identifier>space_cadet.dvorak_fuzzy_finder</identifier>
+
+  <!-- Command P, usually Fuzzy Finder -->
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::J,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::R,
+    ModifierFlag::COMMAND_L
+  </autogen>
+</item>
+
+<item>
+  <name>Dvorak Fuzzy Finder (Slack)</name>
+  <appendix>Remap the fuzzy finder (command P)</appendix>
+
+  <only>SLACK</only>
+
+  <identifier>space_cadet.dvorak_slack_fuzzy_finder</identifier>
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::J,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::K,
+    ModifierFlag::COMMAND_L
+  </autogen>
+
+</item>
+
+
+<item>
+  <name>Witch Command Tab</name>
+  <appendix>Remap command tab to something Witch can work with</appendix>
+
+  <identifier>space_cadet.witch_command_tab</identifier>
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::TAB,
+    ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L,
+
+    KeyCode::CURSOR_LEFT,
+    ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L, ModifierFlag::SHIFT_L
+  </autogen>
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::TAB,
+    ModifierFlag::COMMAND_L,
+
+    KeyCode::CURSOR_RIGHT,
+    ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L, ModifierFlag::SHIFT_L
+  </autogen>
+</item>
+
+<item>
+  <name>Escape to Sleep</name>
+  <appendix>Escape puts the computer to sleep</appendix>
+
+  <identifier>space_cadet.escape_to_sleep</identifier>
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::ESCAPE,
+
+    KeyCode::VK_CONSUMERKEY_POWER,
+    ModifierFlag::CONTROL_L, ModifierFlag::SHIFT_L
+  </autogen>
+</item>
+
+<item>
+  <name>Escape to Backtick</name>
+  <appendix>Escape becomes backtick</appendix>
+
+  <identifier>space_cadet.escape_to_backtick</identifier>
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::ESCAPE,
+
+    KeyCode::BACKQUOTE
+  </autogen>
+</item>
+
+<item>
+  <name>Video Game Arrows -> WASD</name>
+
+  <identifier>video_game_arrows</identifier>
+
+  <autogen>
+    --KeyToKey--
+    KeyCode::A,
+
+    KeyCode::CURSOR_LEFT
+  </autogen>
+  <autogen>
+    --KeyToKey--
+    KeyCode::S,
+
+    KeyCode::CURSOR_DOWN
+  </autogen>
+  <autogen>
+    --KeyToKey--
+    KeyCode::W,
+
+    KeyCode::CURSOR_UP
+  </autogen>
+  <autogen>
+    --KeyToKey--
+    KeyCode::D,
+
+    KeyCode::CURSOR_RIGHT
+  </autogen>
+</item>
+
+
+<vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SHELL_switchprofile_dvorak</name>
+    <url type="shell">
+        <![CDATA[    /Applications/Karabiner.app/Contents/Library/bin/karabiner select_by_name Dvorak    ]]>
+    </url>
+</vkopenurldef>
+<item>
+    <name>Switch Profile to Dvorak with F4</name>
+    <identifier>private.switch1</identifier>
+    <autogen>
+        __KeyToKey__
+        KeyCode::F12,
+        KeyCode::VK_OPEN_URL_SHELL_switchprofile_dvorak
+    </autogen>
+</item>
+
+<vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SHELL_switchprofile_qwerty</name>
+    <url type="shell">
+        <![CDATA[    /Applications/Karabiner.app/Contents/Library/bin/karabiner select_by_name Qwerty    ]]>
+    </url>
+</vkopenurldef>
+<item>
+    <name>Switch Profile to Qwerty with F4</name>
+    <identifier>private.switch2</identifier>
+    <autogen>
+        __KeyToKey__
+        KeyCode::F12,
+        KeyCode::VK_OPEN_URL_SHELL_switchprofile_qwerty
+    </autogen>
+</item>
+
+</root>
