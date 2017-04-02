@@ -45,10 +45,10 @@ brew bundle --file="$dotfiles/Brewfile"
 # Make sure ZSH is the default shell environment
 if [ ! -n "$ZSH_VERSION" ]; then
   command -v zsh | sudo tee -a /etc/shells
-  sudo chsh -s "$(command -v zsh)"
+  chsh -s "$(command -v zsh)"
 fi
 
-sh "$dotfiles/macos.sh"
 sh "$dotfiles/link.sh"
+sh "$dotfiles/macos.sh"
 
 exit 0

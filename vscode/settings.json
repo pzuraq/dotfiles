@@ -26,6 +26,7 @@
         "**/tmp": true
     },
 
+    "editor.fontFamily": "Source Code Pro, Menlo, Monaco, 'Courier New', monospace",
     "editor.renderWhitespace": true,
     "editor.rulers": [100],
     "editor.tabSize": 2,
@@ -42,8 +43,6 @@
     "jshint.enable": false,
 
     "window.zoomLevel": 0,
-
-    "workbench.colorTheme": "Oceanic Reef - Light UI",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.iconTheme": "seti",
     "workbench.quickOpen.closeOnFocusLost": false,
