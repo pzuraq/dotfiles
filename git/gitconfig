@@ -20,5 +20,3 @@
         ui = true
 [filter "lfs"]
         smudge = git-lfs smudge --skip %f
-[url "https://pzuraq@"]
-        insteadOf = git://git@

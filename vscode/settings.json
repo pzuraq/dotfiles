@@ -1,0 +1,51 @@
+{
+    "vscode_custom_css.imports": [
+        "file:///Users/pzuraq/.vscode/extensions/pzuraq.theme-oceanic-reef-0.0.1/styles/oceanic-light.css"
+    ],
+
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/tmp": true
+    },
+
+    "search.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/vendor": true,
+        "**/dist": true,
+        "**/tmp": true
+    },
+
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/node_modules/**": true,
+        "**/tmp": true
+    },
+
+    "editor.renderWhitespace": true,
+    "editor.rulers": [100],
+    "editor.tabSize": 2,
+    "editor.wordWrap": true,
+
+    "explorer.autoReveal": false,
+
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+
+    "guides.normal.color.light": "rgba(35, 65, 84, 1)",
+    "guides.stack.color.light": "rgba(35, 65, 84, 1)",
+
+    "jshint.enable": false,
+
+    "window.zoomLevel": 0,
+
+    "workbench.colorTheme": "Oceanic Reef - Light UI",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.iconTheme": "seti",
+    "workbench.quickOpen.closeOnFocusLost": false,
+    "workbench.welcome.enabled": false
+  }

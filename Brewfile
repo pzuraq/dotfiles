@@ -31,18 +31,21 @@ brew 'wget'
 
 # Development
 brew 'mysql'
+brew 'postgresql'
 
 # Apps
 cask 'aerial'
 cask 'firefox'
 cask 'google-chrome'
-cask 'google-drive'
 cask 'gpgtools'
+cask 'intellij-idea-ce'
 cask 'iterm2'
+cask 'java'
 cask 'postman'
 cask 'sequel-pro'
 cask 'slack'
 cask 'vlc'
+cask 'visual-studio-code'
 
 # Quicklook
 cask 'qlcolorcode'
@@ -52,13 +55,12 @@ cask 'quicklook-csv'
 cask 'qlstephen'
 
 # Fonts
-cask 'font-sauce-code-powerline'
+cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
 
 # Install Mac App Store apps
-mas '1Password', id: 443987910
 mas 'DaisyDisk', id: 411643860
 mas 'iA Writer', id: 775737590
 mas 'Polymail', id: 1134717305
