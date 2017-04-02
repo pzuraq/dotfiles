@@ -6,11 +6,12 @@ dotfiles="$HOME/.dotfiles"
 
 if [ ! -d $dotfiles ]
 then
-  git clone git://github.com/pzuraq/dotfiles.git .dotfiles
+  git clone https://github.com/pzuraq/dotfiles.git .dotfiles
 fi
 
+nvm_dir="$HOME/.nvm"
 # Install NVM
-if [ ! -d $HOME/.nvm ]
+if [ ! -d $nvm_dir ]
 then
   echo "  Installing NVM for you."
 
