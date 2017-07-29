@@ -64,5 +64,4 @@ cask 'font-source-serif-pro'
 mas 'DaisyDisk', id: 411643860
 mas 'iA Writer', id: 775737590
 mas 'Polymail', id: 1134717305
-mas 'Rest', id: 428766272
 mas 'Textual 6', id: 896450579

@@ -66,7 +66,7 @@
     "explorer.openEditors.visible": 0,
     "gitlens.blame.annotation.activeLine": "off",
 
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
 
     // Pink: "#D05572"
     // Background Blue: "#0C2433"
