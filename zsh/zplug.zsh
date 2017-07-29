@@ -9,17 +9,15 @@ zplug "modules/directory", from:prezto
 zplug "modules/spectrum", from:prezto
 zplug "modules/utility", from:prezto
 zplug "modules/completion", from:prezto
+# zplug "modules/prompt", from:prezto
 
 # zsh-syntax-highlighting must be loaded after executing
 # compinit command and sourcing other plugins
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "modules/history-substring-search", from:prezto, defer:2
 
-# Extra plugins
-zplug "denolfe/zsh-travis"
-
 # Load theme file
-zplug "LasaleFamine/phi-zsh-theme", as:theme
+zplug "ginfuru/zsh-blackrain", as:theme
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then

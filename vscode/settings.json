@@ -8,26 +8,41 @@
         "**/.svn": true,
         "**/.hg": true,
         "**/.DS_Store": true,
-        "**/tmp": true
+        "**/tmp": true,
+        "**/.idea": true,
+        "**/buck-out": true,
+        "**/.node_modules.ember-try": true
     },
 
     "search.exclude": {
         "**/.git": true,
         "**/node_modules": true,
+        "**/.node_modules.ember-try": true,
         "**/bower_components": true,
+        "**/.bower_components.ember-try": true,
         "**/vendor": true,
         "**/dist": true,
-        "**/tmp": true
+        "**/tmp": true,
+        "**/.idea": true,
+        "**/buck-out": true,
+        "**/out": true
     },
+
+    "search.useRipgrep": false,
 
     "files.watcherExclude": {
         "**/.git/objects/**": true,
         "**/node_modules/**": true,
-        "**/tmp": true
+        "**/tmp": true,
+        "/tmp/**/*": true,
+        "**/.node_modules.ember-try": true
     },
 
+    "openInGitHub.defaultBranch": "master",
+    "openInGitHub.defaultRemote": "origin",
+
     "editor.renderWhitespace": true,
-    "editor.rulers": [100],
+    "editor.renderIndentGuides": true,
     "editor.tabSize": 2,
     "editor.wordWrap": true,
 
@@ -43,9 +58,113 @@
 
     "window.zoomLevel": 0,
 
-    "workbench.colorTheme": "Oceanic Reef - Light UI",
+    "workbench.colorTheme": "Oceanic Reef",
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.iconTheme": "seti",
     "workbench.quickOpen.closeOnFocusLost": false,
-    "workbench.welcome.enabled": false
-  }
+    "workbench.welcome.enabled": false,
+
+    "explorer.openEditors.visible": 0,
+    "gitlens.blame.annotation.activeLine": "off",
+
+    "editor.minimap.enabled": false
+
+    // Pink: "#D05572"
+    // Background Blue: "#0C2433"
+    // ???: "#D05572"
+    // ???: "#203f54"
+    // "workbench.colorCustomizations": {
+    //     "focusBorder": "#D05572",
+    //     "foreground": "#666666",
+    //     "widget.shadow": "#000000",
+
+    //     "button.background": "#D05572",
+    //     "button.hoverBackground": "#a5455c",
+
+    //     "dropdown.background": "#203f54",
+
+    //     "input.background": "#ffffff",
+    //     "input.foreground": "#222222",
+    //     "inputOption.activeBorder": "#D05572",
+
+    //     "scrollbar.shadow": "#000000",
+
+    //     "list.activeSelectionBackground": "#D05572",
+
+    //     "activityBar.background": "#f9f9f9",
+    //     "activityBar.dropBackground": "#f9f9f9",
+    //     "activityBar.foreground": "#222",
+    //     "activityBarBadge.background": "#D05572",
+
+    //     "sideBar.background": "#f3f3f3",
+
+    //     "editorGroup.background": "#0C2433",
+    //     "editorGroup.border": "#0C2433",
+    //     "editorGroupHeader.tabsBackground": "#0C2433",
+    //     "tab.activeForeground": "#f3f3f3",
+    //     "tab.border": "#0C2433",
+    //     "tab.inactiveBackground": "#0C2433",
+
+    //     "editorWidget.background": "#0C2433",
+    //     "editorSuggestWidget.background": "#0C2433",
+    //     "editorSuggestWidget.border": "#030c11",
+    //     "editorSuggestWidget.selectedBackground": "#D05572",
+    //     "editorHoverWidget.background": "#0C2433",
+    //     "editorHoverWidget.border": "#030c11",
+
+    //     "peekViewEditor.background": "#0C2433",
+    //     "peekViewResult.background": "#0C2433",
+
+    //     "statusBar.background": "#D05572"
+    // },
+
+    "workbench.colorCustomizations": {
+    "focusBorder": "#399EF4",
+    "foreground": "#EFEFEF",
+    "dropdown.background": "#1c2431",
+    "input.background": "#1c2431",
+    "inputOption.activeBorder": "#399EF4",
+    "list.activeSelectionBackground": "#399EF480",
+    "list.dropBackground": "#399EF480",
+    "list.focusBackground": "#399EF480",
+    "list.hoverBackground": "#FFFFFF1a",
+    "list.inactiveSelectionBackground": "#FFFFFF33",
+    "activityBar.background": "#19202b",
+    "activityBar.dropBackground": "#399EF480",
+    "activityBarBadge.background": "#399EF4",
+    "sideBar.background": "#151b25",
+    "sideBarSectionHeader.background": "#19202b",
+    "editorGroup.dropBackground": "#399EF480",
+    "editorGroupHeader.tabsBackground": "#151b25",
+    "tab.border": "#00000033",
+    "tab.inactiveBackground": "#19202b",
+    "editor.background": "#12171F",
+    "editor.foreground": "#EFEFEF",
+    "editorLineNumber.foreground": "#FFFFFF4d",
+    "editor.lineHighlightBorder": "#FFFFFF1a",
+    "editor.rangeHighlightBackground": "#FFFFFF0d",
+    "editorWidget.background": "#151b25",
+    "editorHoverWidget.background": "#151b25",
+    "editorMarkerNavigation.background": "#151b25",
+    "peekView.border": "#399EF4",
+    "peekViewEditor.background": "#0e1218",
+    "peekViewResult.background": "#151b25",
+    "peekViewTitle.background": "#12171F",
+    "panel.background": "#151b25",
+    "panel.border": "#FFFFFF1a",
+    "panelTitle.activeBorder": "#EFEFEF80",
+    "panelTitle.inactiveForeground": "#EFEFEF80",
+    "statusBar.background": "#0e1218",
+    "statusBar.debuggingBackground": "#399EF4",
+    "statusBar.noFolderBackground": "#0e1218",
+    "statusBarItem.activeBackground": "#399EF480",
+    "statusBarItem.hoverBackground": "#FFFFFF1a",
+    "titleBar.activeBackground": "#0e1218",
+    "pickerGroup.border": "#FFFFFF1a",
+    "debugToolBar.background": "#19202b"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "window.titleBarStyle": "native",
+
+    "editor.parameterHints": true,
+    "gitlens.blame.line.enabled": false
+}

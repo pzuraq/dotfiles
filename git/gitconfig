@@ -1,10 +1,10 @@
 [user]
-        name = Christopher Garrett
-        email = me@pzuraq.com
+	name = Christopher Garrett
+	email = me@pzuraq.com
 [credential]
         helper = osxkeychain
 [core]
-        editor = vim
+        editor = code --wait
         excludesfile = /Users/pzuraq/.gitignore
 [alias]
         co = checkout
