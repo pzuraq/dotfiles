@@ -26,11 +26,21 @@
     "command": "workbench.action.nextEditor"
   },
   {
-    "key": "cmd+j",
+    "key": "cmd+p",
     "command": "workbench.action.quickOpen"
   },
   {
-    "key": "shift+cmd+j",
+    "key": "shift+cmd+p",
     "command": "workbench.action.showCommands"
+  },
+  {
+    "key": "cmd+l",
+    "command": "editor.action.marker.next",
+    "when": "editorFocus && !editorReadonly"
+  },
+  {
+    "key": "f8",
+    "command": "-editor.action.marker.next",
+    "when": "editorFocus && !editorReadonly"
   }
 ]
