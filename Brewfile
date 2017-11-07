@@ -25,13 +25,11 @@ brew 'git'
 brew 'hub'
 brew 'tree'
 brew 'mas'
-brew 'rbenv'
 brew 'trash'
 brew 'wget'
 
 # Development
 brew 'mysql'
-brew 'postgresql'
 
 # Apps
 cask 'aerial'
@@ -41,6 +39,7 @@ cask 'gpgtools'
 cask 'intellij-idea-ce'
 cask 'iterm2'
 cask 'java'
+cask 'karabiner-elements'
 cask 'postman'
 cask 'sequel-pro'
 cask 'slack'

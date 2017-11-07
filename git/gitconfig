@@ -4,8 +4,16 @@
 [credential]
         helper = osxkeychain
 [core]
-        editor = code --wait
+	editor = code --wait
         excludesfile = /Users/pzuraq/.gitignore
+[merge]
+        tool = vscode
+[mergetool "vscode"]
+        cmd = code --wait $MERGED
+[diff]
+        tool = vscode
+[difftool "vscode"]
+        cmd = code --wait --diff $LOCAL $REMOTE
 [alias]
         co = checkout
         br = branch

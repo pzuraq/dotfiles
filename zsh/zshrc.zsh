@@ -6,3 +6,5 @@ alias load_db='./Tools/scripts/fetch_remote_db.sh --ldap-username chris.garrett 
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+source ~/.zshrc_local

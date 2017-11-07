@@ -41,6 +41,7 @@ Thumbs.db
 # Developer #
 #############
 .temp-script.js
+.temp-codemod.js
 .idea/
 bower_components/
 node_modules/

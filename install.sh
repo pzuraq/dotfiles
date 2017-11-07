@@ -42,6 +42,8 @@ fi
 # Install dependencies
 brew bundle --file="$dotfiles/Brewfile"
 
+xcode-select --install
+
 # Make sure ZSH is the default shell environment
 if [ ! -n "$ZSH_VERSION" ]; then
   command -v zsh | sudo tee -a /etc/shells
