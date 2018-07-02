@@ -1,225 +1,69 @@
 {
     "gitlens.codeLens.enabled": false,
     "vscode_custom_css.imports": [
-        "file:///Users/pzuraq/.vscode/extensions/pzuraq.vertical-tab-bar-0.1.0/styles/vertical-tab-bar.css"
+        "file:///Users/pzuraq/.vscode/extensions/pzuraq.vertical-tab-bar-1.0.0/styles.css"
     ],
-
+    "javascript.validate.enable": false,
+    "editor.formatOnSave": false,
+    "search.useRipgrep": false,
     "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
         "**/.DS_Store": true,
-        "**/tmp": true,
-        "**/.idea": true,
-        "**/buck-out": true,
-        "**/.node_modules.ember-try": true
-    },
-
-    "search.exclude": {
         "**/.git": true,
-        "**/node_modules": true,
+        "**/.hg": true,
+        "**/.idea": true,
+        "**/.node_modules.ember-try": true,
+        "**/.svn": true,
+        "**/buck-out": true,
+        "**/target": true,
+        "**/tmp": true,
+    },
+    "search.exclude": {
+        "**/.bower_components.ember-try": true,
+        "**/.git": true,
+        "**/.idea": true,
         "**/.node_modules.ember-try": true,
         "**/bower_components": true,
-        "**/.bower_components.ember-try": true,
-        "**/vendor": true,
-        "**/dist": true,
-        "**/tmp": true,
-        "**/.idea": true,
         "**/buck-out": true,
-        "**/out": true
+        "**/dist": true,
+        "**/node_modules": true,
+        "**/out": true,
+        "**/target": true,
+        "**/tmp": true,
+        "**/vendor": true,
     },
-
-    "search.useRipgrep": false,
-
     "files.watcherExclude": {
         "**/.git/objects/**": true,
+        "**/.node_modules.ember-try": true,
         "**/node_modules/**": true,
-        "**/tmp": true,
-        "/tmp/**/*": true,
-        "**/.node_modules.ember-try": true
+        "**/target/**": true,
+        "**/tmp/**/*": true,
     },
-
     "openInGitHub.defaultBranch": "master",
     "openInGitHub.defaultRemote": "origin",
-
     "editor.renderWhitespace": true,
     "editor.renderIndentGuides": true,
     "editor.tabSize": 2,
     "editor.wordWrap": true,
-
     "explorer.autoReveal": false,
-
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
-
+    "jsDocCompletion.enabled": false,
     "guides.normal.color.light": "rgba(35, 65, 84, 1)",
     "guides.stack.color.light": "rgba(35, 65, 84, 1)",
-
     "jshint.enable": false,
-
     "window.zoomLevel": 0,
-
-    "workbench.colorTheme": "FlatUI Immersed",
+    "workbench.colorTheme": "Flat UI Minimal",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.quickOpen.closeOnFocusLost": false,
     "workbench.welcome.enabled": false,
-
     "explorer.openEditors.visible": 0,
     "gitlens.blame.annotation.activeLine": "off",
-
     "editor.minimap.enabled": false,
-
-    // Pink: "#D05572"
-    // Background Blue: "#0C2433"
-    // ???: "#D05572"
-    // ???: "#203f54"
-    // "workbench.colorCustomizations": {
-    //     "focusBorder": "#D05572",
-    //     "foreground": "#666666",
-    //     "widget.shadow": "#000000",
-
-    //     "button.background": "#D05572",
-    //     "button.hoverBackground": "#a5455c",
-
-    //     "dropdown.background": "#203f54",
-
-    //     "input.background": "#ffffff",
-    //     "input.foreground": "#222222",
-    //     "inputOption.activeBorder": "#D05572",
-
-    //     "scrollbar.shadow": "#000000",
-
-    //     "list.activeSelectionBackground": "#D05572",
-
-    //     "activityBar.background": "#f9f9f9",
-    //     "activityBar.dropBackground": "#f9f9f9",
-    //     "activityBar.foreground": "#222",
-    //     "activityBarBadge.background": "#D05572",
-
-    //     "sideBar.background": "#f3f3f3",
-
-    //     "editorGroup.background": "#0C2433",
-    //     "editorGroup.border": "#0C2433",
-    //     "editorGroupHeader.tabsBackground": "#0C2433",
-    //     "tab.activeForeground": "#f3f3f3",
-    //     "tab.border": "#0C2433",
-    //     "tab.inactiveBackground": "#0C2433",
-
-    //     "editorWidget.background": "#0C2433",
-    //     "editorSuggestWidget.background": "#0C2433",
-    //     "editorSuggestWidget.border": "#030c11",
-    //     "editorSuggestWidget.selectedBackground": "#D05572",
-    //     "editorHoverWidget.background": "#0C2433",
-    //     "editorHoverWidget.border": "#030c11",
-
-    //     "peekViewEditor.background": "#0C2433",
-    //     "peekViewResult.background": "#0C2433",
-
-    //     "statusBar.background": "#D05572"
-    // },
-
-    // "workbench.colorCustomizations": {
-    //     "focusBorder": "#399EF4",
-    //     "foreground": "#EFEFEF",
-    //     "dropdown.background": "#1c2431",
-    //     "input.background": "#1c2431",
-    //     "inputOption.activeBorder": "#399EF4",
-    //     "list.activeSelectionBackground": "#399EF480",
-    //     "list.dropBackground": "#399EF480",
-    //     "list.focusBackground": "#399EF480",
-    //     "list.hoverBackground": "#FFFFFF1a",
-    //     "list.inactiveSelectionBackground": "#FFFFFF33",
-    //     "activityBar.background": "#19202b",
-    //     "activityBar.dropBackground": "#399EF480",
-    //     "activityBarBadge.background": "#399EF4",
-    //     "sideBar.background": "#151b25",
-    //     "sideBarSectionHeader.background": "#19202b",
-    //     "editorGroup.dropBackground": "#399EF480",
-    //     "editorGroupHeader.tabsBackground": "#151b25",
-    //     "tab.border": "#00000033",
-    //     "tab.inactiveBackground": "#19202b",
-    //     "editor.background": "#12171F",
-    //     "editor.foreground": "#EFEFEF",
-    //     "editorLineNumber.foreground": "#FFFFFF4d",
-    //     "editor.lineHighlightBorder": "#FFFFFF1a",
-    //     "editor.rangeHighlightBackground": "#FFFFFF0d",
-    //     "editorWidget.background": "#151b25",
-    //     "editorHoverWidget.background": "#151b25",
-    //     "editorMarkerNavigation.background": "#151b25",
-    //     "peekView.border": "#399EF4",
-    //     "peekViewEditor.background": "#0e1218",
-    //     "peekViewResult.background": "#151b25",
-    //     "peekViewTitle.background": "#12171F",
-    //     "panel.background": "#151b25",
-    //     "panel.border": "#FFFFFF1a",
-    //     "panelTitle.activeBorder": "#EFEFEF80",
-    //     "panelTitle.inactiveForeground": "#EFEFEF80",
-    //     "statusBar.background": "#0e1218",
-    //     "statusBar.debuggingBackground": "#399EF4",
-    //     "statusBar.noFolderBackground": "#0e1218",
-    //     "statusBarItem.activeBackground": "#399EF480",
-    //     "statusBarItem.hoverBackground": "#FFFFFF1a",
-    //     "titleBar.activeBackground": "#0e1218",
-    //     "pickerGroup.border": "#FFFFFF1a",
-    //     "debugToolBar.background": "#19202b"
-    //     },
-
-    // "workbench.colorCustomizations": {
-    // "focusBorder": "#399EF4",
-    // "foreground": "#EFEFEF",
-    // "dropdown.background": "#1c2431",
-    // "input.background": "#1c2431",
-    // "inputOption.activeBorder": "#399EF4",
-    // "list.activeSelectionBackground": "#399EF480",
-    // "list.dropBackground": "#399EF480",
-    // "list.focusBackground": "#399EF480",
-    // "list.hoverBackground": "#FFFFFF1a",
-    // "list.inactiveSelectionBackground": "#FFFFFF33",
-    // "activityBar.background": "#252525",
-    // "activityBar.dropBackground": "#399EF480",
-    // "activityBarBadge.background": "#399EF4",
-    // "sideBar.background": "#191919",
-    // "sideBarSectionHeader.background": "#19202b",
-    // "editorGroup.dropBackground": "#389EF480",
-    // "editorGroupHeader.tabsBackground": "#222222",
-    // "tab.border": "#222222",
-    // "tab.inactiveBackground": "#222222",
-    // "editor.background": "#2d2d2d",
-    // "editor.foreground": "#EFEFEF",
-    // "editorLineNumber.foreground": "#FFFFFF4d",
-    // "editor.lineHighlightBorder": "#FFFFFF1a",
-    // "editor.rangeHighlightBackground": "#FFFFFF0d",
-    // "editorWidget.background": "#151b25",
-    // "editorHoverWidget.background": "#151b25",
-    // "editorMarkerNavigation.background": "#151b25",
-    // "peekView.border": "#399EF4",
-    // "peekViewEditor.background": "#0e1218",
-    // "peekViewResult.background": "#151b25",
-    // "peekViewTitle.background": "#12171F",
-    // "panel.background": "#151515",
-    // "panel.border": "#FFFFFF1a",
-    // "panelTitle.activeBorder": "#EFEFEF80",
-    // "panelTitle.inactiveForeground": "#EFEFEF80",
-    // "statusBar.background": "#151515",
-    // "statusBar.debuggingBackground": "#399EF4",
-    // "statusBar.noFolderBackground": "#151515",
-    // "statusBarItem.activeBackground": "#399EF480",
-    // "statusBarItem.hoverBackground": "#FFFFFF1a",
-    // "titleBar.activeBackground": "#0e1218",
-    // "pickerGroup.border": "#FFFFFF1a",
-    // "debugToolBar.background": "#19202b"
-    // },
-
-    // "workbench.colorCustomizations": {
-    //     "statusBar.background": "#ffffff",
-    //     "statusBar.noFolderBackground": "#ffffff"
-    // },
-
-    "workbench.iconTheme": "material-icon-theme",
-    "window.titleBarStyle": "native",
-
-    "editor.parameterHints": true,
-    "gitlens.blame.line.enabled": false,
+    "emmet.showExpandedAbbreviation": "never",
+    // "workbench.iconTheme": "material-icon-theme",
+    // "window.titleBarStyle": "native",
+    // "editor.parameterHints": true,
+    // "gitlens.blame.line.enabled": false,
     // "rust.rustup": {
     //     "toolchain": "stable-x86_64-apple-darwin",
     //     "nightlyToolchain": "nightly-x86_64-apple-darwin"
@@ -233,36 +77,44 @@
         "accent": "Teal",
         "accentPrevious": "Acid Lime"
     },
-    "workbench.colorCustomizations": {
-        "activityBarBadge.background": "#80CBC4",
-        "list.activeSelectionForeground": "#80CBC4",
-        "list.inactiveSelectionForeground": "#80CBC4",
-        "list.highlightForeground": "#80CBC4",
-        "scrollbarSlider.activeBackground": "#80CBC450",
-        "editorSuggestWidget.highlightForeground": "#80CBC4",
-        "textLink.foreground": "#80CBC4",
-        "progressBar.background": "#80CBC4",
-        "pickerGroup.foreground": "#80CBC4",
-        "statusBar.background": "#ffffff",
-        "statusBar.border": "#ffffff",
-        "statusBar.noFolderBackground": "#ffffff",
-        "activityBar.background": "#ffffff",
-        "activityBar.border": "#ffffff",
-        "activityBar.dropBackground": "#ffffff",
-        "sideBar.background": "#ffffff",
-        "sideBar.border": "#ffffff",
-        "sideBarSectionHeader.background": "#ffffff",
-        "tab.inactiveBackground": "#ffffff",
-        "tab.activeBackground": "#ffffff",
-        "tab.inactiveForeground": "#cecece",
-        "tab.border": "#ffffff",
-        "editorGroupHeader.tabsBackground": "#ffffff",
-        "editorGroup.border": "#ffffff",
-        "editorGroup.dropBackground": "#ffffff",
-        "editorGroupHeader.tabsBorder": "#ffffff",
-        "scrollbar.shadow": "#ffffff",
-        "editor.background": "#ffffff",
-        "panel.background": "#ffffff",
+    "typescript.check.npmIsInstalled": false,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
     },
-    "typescript.check.npmIsInstalled": false
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.enabled": false,
+    "workbench.activityBar.visible": true,
+    "gitlens.keymap": "alternate",
+    "rust-client.channel": "nightly",
+    "editor.rulers": [
+        80
+    ],
+
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "es5",
+    "todohighlight.isCaseSensitive": false,
+    "todohighlight.keywords": [
+        "obviously",
+        "basically",
+        "simply",
+        "of course",
+        "clearly",
+        "just",
+        "everyone knows",
+        "however",
+        " so ",
+        " so.",
+        " so,",
+        "easy"
+    ],
+    "gitlens.historyExplorer.enabled": true
 }

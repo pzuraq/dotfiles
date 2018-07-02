@@ -17,7 +17,7 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "modules/history-substring-search", from:prezto, defer:2
 
 # Load theme file
-zplug "ginfuru/zsh-blackrain", as:theme
+zplug "geometry-zsh/geometry", as:theme
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
