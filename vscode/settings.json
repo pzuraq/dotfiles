@@ -52,7 +52,7 @@
     "guides.stack.color.light": "rgba(35, 65, 84, 1)",
     "jshint.enable": false,
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "Flat UI Minimal",
+    "workbench.colorTheme": "Oceanic Reef Dark",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.quickOpen.closeOnFocusLost": false,
     "workbench.welcome.enabled": false,
