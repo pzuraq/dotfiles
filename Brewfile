@@ -28,9 +28,6 @@ brew 'mas'
 brew 'trash'
 brew 'wget'
 
-# Development
-brew 'mysql@5.6'
-
 # Apps
 cask 'aerial'
 cask 'bartender'
@@ -61,5 +58,4 @@ cask 'font-source-serif-pro'
 
 # Install Mac App Store apps
 mas 'DaisyDisk', id: 411643860
-mas 'iA Writer', id: 775737590
 mas 'Textual 6', id: 896450579
