@@ -14,11 +14,6 @@
         tool = vscode
 [difftool "vscode"]
         cmd = code --wait --diff $LOCAL $REMOTE
-[alias]
-        co = checkout
-        br = branch
-        ci = commit
-        st = status
 [hub]
         protocol = https
 [color]
@@ -28,3 +23,45 @@
         ui = true
 [filter "lfs"]
         smudge = git-lfs smudge --skip %f
+
+[alias]
+        ci = commit
+        cm = commit -m
+        ca = commit --amend
+        st = status
+        unstage = reset HEAD --  # move files from the index to the workspace
+        last = log -1 HEAD       # show the most recent entry in the log
+        lg = log --oneline --decorate --graph   # show the commit graph with branch and tag labels
+        hash = !"bash -c 'git rev-parse HEAD | tee >(pbcopy)'"  # print the hash of HEAD and put on clipboard
+        co = checkout
+        cob= checkout -b
+        br = branch --color
+        ri = rebase -i
+        pu = pull
+        cp = cherry-pick
+        ls = log --stat
+        staged = diff --cached --color
+        # Awesome gitk-in-cli like convenience
+        hlog = log --date-order --all --graph --format=\"%C(green)%H%Creset %C(yellow)%an%Creset %C(blue bold)%ar%Creset %C(red bold)%d%Creset%s\"
+        d = diff --color-words
+        gitkconflict = !gitk --left-right HEAD...MERGE_HEAD
+        amend = commit --amend -C HEAD
+        recents = for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads
+        hist = log -p -M -C --find-copies-harder --follow
+        um = !git checkout master && git pull && git checkout - && git pull && git merge master
+        # list aliases
+        aliases = !git config --get-regexp ^alias\\. | sort
+        # add all changes (including untracked files) and commit with message
+        cam = !sh -c 'git add -A && git commit -m \"$1\"' -
+
+        oneline = log --oneline
+          # e14d631 (HEAD, origin/master, origin/HEAD, master) Merge branch 'maint'
+          # 0f64a5a Merge branch 'rr/misc-fixes'
+          # ef563de convert.c: Fix return type of git_path_check_eol()
+          # 1e501a7 (origin/maint) documentation fix: git difftool uses diff tools, not merge tools.
+          # 05bab3e config.c: Fix a static buffer overwrite bug by avoiding mkpath()
+          # 3a81f33 t5501-*.sh: Fix url passed to clone in setup test
+
+        patch = add --patch
+          # add hunks of code interactively
+          # useful for separating a bunch of changes into logical commits

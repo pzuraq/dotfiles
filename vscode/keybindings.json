@@ -42,5 +42,13 @@
     "key": "f8",
     "command": "-editor.action.marker.next",
     "when": "editorFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+cmd+i",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal"
   }
 ]

@@ -29,16 +29,16 @@ brew 'trash'
 brew 'wget'
 
 # Development
-brew 'mysql'
+brew 'mysql@5.6'
 
 # Apps
 cask 'aerial'
+cask 'bartender'
 cask 'firefox'
 cask 'google-chrome'
-cask 'gpgtools'
 cask 'intellij-idea-ce'
 cask 'iterm2'
-cask 'java'
+cask 'java8'
 cask 'karabiner-elements'
 cask 'postman'
 cask 'sequel-pro'
@@ -62,5 +62,4 @@ cask 'font-source-serif-pro'
 # Install Mac App Store apps
 mas 'DaisyDisk', id: 411643860
 mas 'iA Writer', id: 775737590
-mas 'Polymail', id: 1134717305
 mas 'Textual 6', id: 896450579
