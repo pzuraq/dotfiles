@@ -13,7 +13,7 @@
                 },
                 "rules": [
                     {
-                        "description": "Change caps_lock key to fn. (Post escape key when pressed alone) (Non-IAWriter)",
+                        "description": "Change caps_lock key to hyper. (Post escape key when pressed alone) (Non-IAWriter)",
                         "manipulators": [
                             {
                                 "from": {
@@ -26,7 +26,18 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "fn"
+                                        "set_variable": {
+                                            "name": "hyper_modifier",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_modifier",
+                                            "value": 0
+                                        }
                                     }
                                 ],
                                 "to_if_alone": [
@@ -39,7 +50,8 @@
                                     {
                                         "type": "frontmost_application_unless",
                                         "bundle_identifiers": [
-                                            "^pro\\.writer\\.mac$"
+                                            "^pro\\.writer\\.mac$",
+                                            "^it\\.bloop\\.airmail2$"
                                         ]
                                     }
                                 ]
@@ -55,7 +67,18 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "fn"
+                                        "set_variable": {
+                                            "name": "hyper_modifier",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "hyper_modifier",
+                                            "value": 0
+                                        }
                                     }
                                 ],
                                 "type": "basic",
@@ -63,7 +86,8 @@
                                     {
                                         "type": "frontmost_application_if",
                                         "bundle_identifiers": [
-                                            "^pro\\.writer\\.mac$"
+                                            "^pro\\.writer\\.mac$",
+                                            "^it\\.bloop\\.airmail2$"
                                         ]
                                     }
                                 ]
@@ -130,14 +154,13 @@
                         ]
                     },
                     {
-                        "description": "Change fn + J/K/L/; to Arrow Keys",
+                        "description": "Change hyper + J/K/L/; to Arrow Keys",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
-                                            "fn",
                                             "left_command"
                                         ],
                                         "optional": [
@@ -153,6 +176,13 @@
                                         ]
                                     }
                                 ],
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "hyper_modifier",
+                                        "value": 1
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -160,7 +190,6 @@
                                     "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
-                                            "fn",
                                             "left_command"
                                         ],
                                         "optional": [
@@ -176,6 +205,13 @@
                                         ]
                                     }
                                 ],
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "hyper_modifier",
+                                        "value": 1
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -183,7 +219,6 @@
                                     "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
-                                            "fn",
                                             "left_command"
                                         ],
                                         "optional": [
@@ -199,6 +234,13 @@
                                         ]
                                     }
                                 ],
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "hyper_modifier",
+                                        "value": 1
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -206,7 +248,6 @@
                                     "key_code": "semicolon",
                                     "modifiers": {
                                         "mandatory": [
-                                            "fn",
                                             "left_command"
                                         ],
                                         "optional": [
@@ -222,15 +263,19 @@
                                         ]
                                     }
                                 ],
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "hyper_modifier",
+                                        "value": 1
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ],
                                         "optional": [
                                             "any"
                                         ]
@@ -241,15 +286,19 @@
                                         "key_code": "left_arrow"
                                     }
                                 ],
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "hyper_modifier",
+                                        "value": 1
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
                                 "from": {
                                     "key_code": "k",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ],
                                         "optional": [
                                             "any"
                                         ]
@@ -260,15 +309,19 @@
                                         "key_code": "down_arrow"
                                     }
                                 ],
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "hyper_modifier",
+                                        "value": 1
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ],
                                         "optional": [
                                             "any"
                                         ]
@@ -279,15 +332,19 @@
                                         "key_code": "up_arrow"
                                     }
                                 ],
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "hyper_modifier",
+                                        "value": 1
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
                                 "from": {
                                     "key_code": "semicolon",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ],
                                         "optional": [
                                             "any"
                                         ]
@@ -296,6 +353,13 @@
                                 "to": [
                                     {
                                         "key_code": "right_arrow"
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "hyper_modifier",
+                                        "value": 1
                                     }
                                 ],
                                 "type": "basic"
@@ -310,7 +374,6 @@
                                     "key_code": "quote",
                                     "modifiers": {
                                         "mandatory": [
-                                            "fn",
                                             "left_command",
                                             "left_shift"
                                         ],
@@ -327,6 +390,13 @@
                                         ]
                                     }
                                 ],
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "hyper_modifier",
+                                        "value": 1
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -334,7 +404,6 @@
                                     "key_code": "quote",
                                     "modifiers": {
                                         "mandatory": [
-                                            "fn",
                                             "left_command"
                                         ],
                                         "optional": [
@@ -350,15 +419,19 @@
                                         ]
                                     }
                                 ],
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "hyper_modifier",
+                                        "value": 1
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
                                 "from": {
                                     "key_code": "quote",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ],
                                         "optional": [
                                             "any"
                                         ]
@@ -367,6 +440,13 @@
                                 "to": [
                                     {
                                         "key_code": "delete_or_backspace"
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "hyper_modifier",
+                                        "value": 1
                                     }
                                 ],
                                 "type": "basic"
@@ -514,9 +594,6 @@
                                 "from": {
                                     "key_code": "q",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ],
                                         "optional": [
                                             "any"
                                         ]
@@ -530,15 +607,19 @@
                                         ]
                                     }
                                 ],
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "hyper_modifier",
+                                        "value": 1
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
                                 "from": {
                                     "key_code": "w",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ],
                                         "optional": [
                                             "any"
                                         ]
@@ -552,15 +633,19 @@
                                         ]
                                     }
                                 ],
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "hyper_modifier",
+                                        "value": 1
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
                                 "from": {
                                     "key_code": "e",
                                     "modifiers": {
-                                        "mandatory": [
-                                            "fn"
-                                        ],
                                         "optional": [
                                             "any"
                                         ]
@@ -572,6 +657,13 @@
                                         "modifiers": [
                                             "left_control"
                                         ]
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "hyper_modifier",
+                                        "value": 1
                                     }
                                 ],
                                 "type": "basic"

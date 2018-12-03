@@ -1,0 +1,11 @@
+#!/usr/bin/env fish
+
+function ember-source -a query
+  if not test -e ~/.ember-source/mappings.json
+    mkdir ~/.ember-source;
+    curl https://raw.githubusercontent.com/ember-cli/ember-rfc176-data/master/mappings.json > ~/.ember-source/mappings.json
+  end
+  ag --silent --nonumbers --after=1 $query ~/.ember-source/mappings.json
+end
+
+ember-source $argv[1]
