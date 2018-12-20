@@ -176,8 +176,9 @@
         }
     ],
     "breadcrumbs.enabled": true,
-    "workbench.iconTheme": "eq-material-theme-icons-palenight",
+    "workbench.iconTheme": "eq-material-theme-icons-darker",
     "workbench.statusBar.visible": true,
     "gitlens.views.fileHistory.enabled": true,
-    "gitlens.views.lineHistory.enabled": true
+    "gitlens.views.lineHistory.enabled": true,
+    "materialTheme.autoApplyIcons": false
 }
