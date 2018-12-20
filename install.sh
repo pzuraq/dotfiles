@@ -9,13 +9,13 @@ then
   git clone https://github.com/pzuraq/dotfiles.git .dotfiles
 fi
 
-nvm_dir="$HOME/.nvm"
-# Install NVM
-if [ ! -d $nvm_dir ]
+notion_dir="$HOME/.notion"
+# Install Notion
+if [ ! -d $notion_dir ]
 then
-  echo "  Installing NVM for you."
+  echo "  Installing Notion for you."
 
-  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh | bash
+  curl -sSLf https://get.notionjs.com | bash
 fi
 
 # Install Homebrew
