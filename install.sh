@@ -15,6 +15,7 @@ if [ ! -d $notion_dir ]
 then
   echo "  Installing Notion for you."
 
+  touch $notion_dir
   curl -sSLf https://get.notionjs.com | bash
 fi
 
