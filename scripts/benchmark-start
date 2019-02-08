@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+sudo launchctl unload -w /Library/LaunchDaemons/com.crashplan.engine.plist
+sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist
+sudo launchctl unload -w /Library/LaunchDaemons/com.jamfsoftware.task.1.plist
+sudo launchctl unload -w /Library/LaunchDaemons/com.jamfsoftware.jamf.daemon.plist
