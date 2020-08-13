@@ -1,11 +1,12 @@
 [user]
-	name = Christopher Garrett
-	email = opensource@pzuraq.com
+	name = Chris Garrett
+	email = cgarrett@linkedin.com
 [credential]
         helper = osxkeychain
 [core]
 	editor = code --wait
         excludesfile = /Users/pzuraq/.gitignore
+	pager = diff-so-fancy | less --tabs=2 -RFX
 [merge]
         tool = vscode
 [mergetool "vscode"]
@@ -15,14 +16,17 @@
 [difftool "vscode"]
         cmd = code --wait --diff $LOCAL $REMOTE
 [hub]
-        protocol = https
+        protocol = ssh
 [color]
         diff = auto
         status = auto
         branch = auto
-        ui = true
+	ui = true
 [filter "lfs"]
-        smudge = git-lfs smudge --skip %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
 
 [alias]
         ci = commit
@@ -63,5 +67,21 @@
           # 3a81f33 t5501-*.sh: Fix url passed to clone in setup test
 
         patch = add --patch
+	delete-merged-branches = !git branch --merged master | grep -v -e 'master' -e '\\*' | xargs -n 1 git branch -d && git remote prune origin
           # add hunks of code interactively
           # useful for separating a bunch of changes into logical commits
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[diff-so-fancy]
+	stripLeadingSymbols = false
+	markEmptyLines = false

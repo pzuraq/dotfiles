@@ -9,14 +9,14 @@ then
   git clone https://github.com/pzuraq/dotfiles.git .dotfiles
 fi
 
-notion_dir="$HOME/.notion"
-# Install Notion
-if [ ! -d $notion_dir ]
+volta_dir="$HOME/.volta"
+# Install Volta
+if [ ! -d $volta_dir ]
 then
   echo "  Installing Notion for you."
 
-  mkdir $notion_dir
-  curl -sSLf https://get.notionjs.com | bash
+  mkdir $volta_dir
+  curl https://get.volta.sh | bash
 fi
 
 # Install Homebrew
