@@ -33,6 +33,7 @@ cask 'iterm2'
 cask 'karabiner-elements'
 cask 'slack'
 cask 'visual-studio-code'
+cask 'amphetamine'
 
 # Fonts
 cask 'font-source-code-pro-for-powerline'
