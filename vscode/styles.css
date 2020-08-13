@@ -1,0 +1,38 @@
+.vertical-tab-bar-enabled .monaco-workbench {
+  width: 100vw !important;
+}
+
+.vertical-tab-bar-enabled .part.editor,
+.vertical-tab-bar-enabled .part.panel.bottom {
+  left: 200px;
+  position: relative;
+  overflow: visible;
+}
+
+.vertical-tab-bar-enabled .part.editor > .content,
+.vertical-tab-bar-enabled .part.editor .title.tabs,
+.vertical-tab-bar-enabled .monaco-grid-view {
+  overflow: visible !important;
+}
+
+.vertical-tab-bar-enabled .split-view-view:nth-child(4) {
+  transform: translateX(200px);
+}
+
+.vertical-tab-bar .tabs-and-actions-container .monaco-scrollable-element {
+  position: absolute !important;
+  left: -200px;
+  height: calc(100vh - 22px) !important;
+  width: 200px;
+  z-index: 1000;
+}
+
+.vertical-tab-bar .tabs-container {
+  flex-direction: column;
+  height: 100% !important;
+  width: 200px;
+}
+
+.vertical-tab-bar .tabs-container > .tab {
+  min-width: 200px !important;
+}
