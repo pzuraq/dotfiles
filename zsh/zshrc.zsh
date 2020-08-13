@@ -18,9 +18,6 @@ alias chrome="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Ch
 
 export NODE_OPTIONS="--max-old-space-size=8192"
 
-export GITHUB_AUTH="3f8a693d63739b81b88f6d7912f6618fc922fcb2"
-export GITHUB_TOKEN="3f8a693d63739b81b88f6d7912f6618fc922fcb2"
-
 export EDITOR="code --wait --new-window"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
