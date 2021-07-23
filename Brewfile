@@ -1,5 +1,4 @@
 # Taps
-tap 'homebrew/cask-cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/bundle'
 
@@ -18,6 +17,7 @@ brew 'grep'
 
 # Install Binaries
 brew 'git'
+brew 'svn'
 brew 'hub'
 brew 'tree'
 brew 'mas'
@@ -33,7 +33,6 @@ cask 'iterm2'
 cask 'karabiner-elements'
 cask 'slack'
 cask 'visual-studio-code'
-cask 'amphetamine'
 
 # Fonts
 cask 'font-source-code-pro-for-powerline'

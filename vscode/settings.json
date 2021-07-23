@@ -1,5 +1,4 @@
 {
-  "gitlens.codeLens.enabled": false,
   "vscode_custom_css.imports": [
     "file:///Users/cgarrett/.dotfiles/vscode/styles.css",
     "file:///Users/cgarrett/.dotfiles/vscode/script.js",
@@ -69,7 +68,6 @@
   "guides.normal.color.light": "rgba(35, 65, 84, 1)",
   "guides.stack.color.light": "rgba(35, 65, 84, 1)",
   "jshint.enable": false,
-  "window.zoomLevel": 0,
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.quickOpen.closeOnFocusLost": false,
   "workbench.welcome.enabled": false,
@@ -123,15 +121,13 @@
       "token": "system"
     }
   ],
-  "breadcrumbs.enabled": true,
+  "breadcrumbs.enabled": false,
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.statusBar.visible": true,
   "gitlens.views.fileHistory.enabled": true,
   "gitlens.views.lineHistory.enabled": true,
   "materialTheme.autoApplyIcons": false,
   "git.ignoreMissingGitWarning": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.colorTheme": "Horizon Bright Italic",
   "liveshare.featureSet": "insiders",
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -159,7 +155,6 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "java.configuration.checkProjectSettingsExclusions": false,
   "terminal.integrated.scrollback": 10000,
-  "eslint.packageManager": "yarn",
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -168,5 +163,17 @@
   ],
   "references.preferredLocation": "view",
   "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.acceptSuggestionOnEnter": "smart"
+  "editor.acceptSuggestionOnEnter": "smart",
+  "gitlens.mode.active": "zen",
+  "eslint.format.enable": true,
+  "eslint.packageManager": "yarn",
+  "workbench.editor.wrapTabs": true,
+  "workbench.colorTheme": "Ayu Mirage Bordered",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "default",
+      "filenamePattern": "git-rebase-todo"
+    }
+  ],
+  "window.zoomLevel": 2
 }
