@@ -2,10 +2,6 @@
 tap 'homebrew/cask-fonts'
 tap 'homebrew/bundle'
 
-# Install ZSH
-brew 'zsh'
-brew 'zplug'
-
 # Apps
 cask 'bartender'
 cask 'dash'
