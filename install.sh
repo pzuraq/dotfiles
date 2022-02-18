@@ -4,6 +4,8 @@ mkdir -p "$HOME/Code"
 
 dotfiles="$HOME/.dotfiles"
 
+xcode-select --install
+
 if [ ! -d $dotfiles ]
 then
   git clone https://github.com/pzuraq/dotfiles.git .dotfiles
@@ -13,10 +15,24 @@ volta_dir="$HOME/.volta"
 # Install Volta
 if [ ! -d $volta_dir ]
 then
-  echo "  Installing Notion for you."
+  echo "  Installing Volta for you."
 
   mkdir $volta_dir
   curl https://get.volta.sh | bash
+fi
+
+prezto_dir="${ZDOTDIR:-$HOME}/.zprezto"
+# Install Prezto
+if [ ! -d $prezto_dir ]
+then
+  echo "  Installing Prezto for you."
+
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git
+
+  setopt EXTENDED_GLOB
+  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+  done
 fi
 
 # Install Homebrew
@@ -43,15 +59,6 @@ fi
 # Install dependencies
 brew bundle --file="$dotfiles/Brewfile"
 
-xcode-select --install
-
-# Make sure ZSH is the default shell environment
-if [ ! -n "$ZSH_VERSION" ]; then
-  command -v zsh | sudo tee -a /etc/shells
-  chsh -s "$(command -v zsh)"
-fi
-
 sh "$dotfiles/link.sh"
-sh "$dotfiles/macos.sh"
 
 exit 0

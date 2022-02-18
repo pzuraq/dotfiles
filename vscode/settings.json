@@ -8,12 +8,12 @@
   "vscode_custom_css.policy": true,
   "javascript.validate.enable": false,
   "[javascript]": {
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "editor.formatOnPaste": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "editor.formatOnPaste": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -60,7 +60,6 @@
   "editor.renderWhitespace": "none",
   "editor.renderIndentGuides": true,
   "editor.tabSize": 2,
-  "editor.wordWrap": true,
   "explorer.autoReveal": false,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
@@ -121,7 +120,6 @@
       "token": "system"
     }
   ],
-  "breadcrumbs.enabled": false,
   "workbench.iconTheme": "material-icon-theme",
   "gitlens.views.fileHistory.enabled": true,
   "gitlens.views.lineHistory.enabled": true,
@@ -159,21 +157,49 @@
     "javascript",
     "javascriptreact",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
+    "svelte"
   ],
   "references.preferredLocation": "view",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.acceptSuggestionOnEnter": "smart",
-  "gitlens.mode.active": "zen",
   "eslint.format.enable": true,
-  "eslint.packageManager": "yarn",
   "workbench.editor.wrapTabs": true,
-  "workbench.colorTheme": "Ayu Mirage Bordered",
-  "workbench.editorAssociations": [
-    {
-      "viewType": "default",
-      "filenamePattern": "git-rebase-todo"
-    }
+  "workbench.colorTheme": "Night Owl",
+  "workbench.editorAssociations": {
+    "git-rebase-todo": "default"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontFamily": "MonoLisa, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "fontshortcuts.step": 0.5,
+  "editor.lineHeight": 0,
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 12,
+  "editor.wordWrap": "on",
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "svelte"
   ],
-  "window.zoomLevel": 2
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "javascript.format.enable": false,
+  "typescript.format.enable": false,
+  "rust-analyzer.checkOnSave.command": "check --all-targets --tests",
+  "rust-analyzer.checkOnSave.allTargets": false,
+  "svelte.enable-ts-plugin": true,
+  "editor.formatOnSave": true
 }

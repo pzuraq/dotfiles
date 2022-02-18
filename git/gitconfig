@@ -1,6 +1,7 @@
 [user]
-	name = Chris Garrett
-	email = cgarrett@linkedin.com
+	name = Chris Hewell Garrett
+	email = chris@bitski.com
+	signingkey = 2D4F1334CE9F7FDDEED58B9DBEF86E32E8C996E9
 [credential]
         helper = osxkeychain
 [core]
@@ -85,3 +86,9 @@
 [diff-so-fancy]
 	stripLeadingSymbols = false
 	markEmptyLines = false
+[commit]
+	gpgSign = true
+[init]
+	defaultBranch = main
+[pull]
+	ff = only

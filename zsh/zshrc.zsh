@@ -1,7 +1,17 @@
+# Setup GPG Agent.
+unset SSH_AGENT_PID
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
+
+# Source Brew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Customize to your needs...
 
@@ -17,3 +27,9 @@ export NODE_OPTIONS="--max-old-space-size=8192"
 export EDITOR="code --wait --new-window"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+# Add local config not checked into VCS
+source "$HOME/.profile"
+
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=`which chromium`
