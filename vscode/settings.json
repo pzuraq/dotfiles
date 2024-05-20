@@ -58,7 +58,6 @@
   "openInGitHub.defaultBranch": "master",
   "openInGitHub.defaultRemote": "origin",
   "editor.renderWhitespace": "none",
-  "editor.renderIndentGuides": true,
   "editor.tabSize": 2,
   "explorer.autoReveal": false,
   "files.insertFinalNewline": true,
@@ -88,11 +87,9 @@
   },
   "gitlens.currentLine.enabled": false,
   "gitlens.hovers.currentLine.enabled": false,
-  "workbench.activityBar.visible": true,
   "gitlens.keymap": "alternate",
   "rust-client.channel": "nightly",
   "editor.rulers": [80],
-
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5",
   "todohighlight.isCaseSensitive": false,
@@ -111,8 +108,6 @@
     "easy"
   ],
   "gitlens.historyExplorer.enabled": true,
-
-  "workbench.sideBar.location": "left",
   "github.hosts": [
     {
       "host": "https://github.com",
@@ -147,7 +142,6 @@
   "revealjs.enableChalkBoard": false,
   "revealjs.enableChalkboard": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "extensions.autoUpdate": false,
   "revealjs.theme": "night",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -165,7 +159,7 @@
   "editor.acceptSuggestionOnEnter": "smart",
   "eslint.format.enable": true,
   "workbench.editor.wrapTabs": true,
-  "workbench.colorTheme": "Night Owl",
+  "workbench.colorTheme": "Shades of Purple (Super Dark)",
   "workbench.editorAssociations": {
     "git-rebase-todo": "default"
   },
@@ -176,13 +170,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[svelte]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "svelte.svelte-vscode"
   },
   "editor.fontFamily": "MonoLisa, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "fontshortcuts.step": 0.5,
   "editor.lineHeight": 0,
-  "editor.fontSize": 14,
   "terminal.integrated.fontSize": 12,
   "editor.wordWrap": "on",
   "eslint.probe": [
@@ -201,5 +194,17 @@
   "rust-analyzer.checkOnSave.command": "check --all-targets --tests",
   "rust-analyzer.checkOnSave.allTargets": false,
   "svelte.enable-ts-plugin": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "editor.guides.indentation": true,
+  "editor.accessibilitySupport": "off",
+  "editor.guides.bracketPairs": true,
+  "workbench.panel.defaultLocation": "left",
+  "terminal.integrated.tabs.enabled": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "workbench.editor.splitInGroupLayout": "vertical"
 }

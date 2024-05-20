@@ -1,12 +1,12 @@
 [user]
-	name = Chris Hewell Garrett
-	email = chris@bitski.com
-	signingkey = 2D4F1334CE9F7FDDEED58B9DBEF86E32E8C996E9
+	name = Kristen Maevyn
+	email = kris@bitski.com
+        signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL9g1mwlxlkcVs0pPuPz1Jjk6/a6mDhz826LgM591rH0
 [credential]
-        helper = osxkeychain
+	helper = store
 [core]
 	editor = code --wait
-        excludesfile = /Users/pzuraq/.gitignore
+	excludesfile = /Users/kristen/.gitignore
 	pager = diff-so-fancy | less --tabs=2 -RFX
 [merge]
         tool = vscode
@@ -86,6 +86,12 @@
 [diff-so-fancy]
 	stripLeadingSymbols = false
 	markEmptyLines = false
+[gpg]
+        format = ssh
+
+[gpg "ssh"]
+        program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
 [commit]
 	gpgSign = true
 [init]

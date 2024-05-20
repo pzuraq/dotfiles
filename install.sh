@@ -1,64 +1,24 @@
-#!/bin/sh
-cd $HOME
-mkdir -p "$HOME/Code"
+#!/bin/bash
 
 dotfiles="$HOME/.dotfiles"
 
-xcode-select --install
+link() {
+  from="$dotfiles/$1"
+  to="$HOME/$2"
+  echo "Linking '$from' to '$to'"
+  rm -f "$to"
+  mkdir -p "$(dirname "$to")"
+  ln -s "$from" "$to"
+}
 
-if [ ! -d $dotfiles ]
-then
-  git clone https://github.com/pzuraq/dotfiles.git .dotfiles
-fi
+# link files
 
-volta_dir="$HOME/.volta"
-# Install Volta
-if [ ! -d $volta_dir ]
-then
-  echo "  Installing Volta for you."
+link "git/gitconfig" ".gitconfig"
+link "git/gitignore" ".gitignore"
 
-  mkdir $volta_dir
-  curl https://get.volta.sh | bash
-fi
+link "karabiner/karabiner.json" ".config/karabiner/karabiner.json"
 
-prezto_dir="${ZDOTDIR:-$HOME}/.zprezto"
-# Install Prezto
-if [ ! -d $prezto_dir ]
-then
-  echo "  Installing Prezto for you."
+link "vscode/settings.json" "Library/Application Support/Code/User/settings.json"
+link "vscode/keybindings.json" "Library/Application Support/Code/User/keybindings.json"
 
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git
-
-  setopt EXTENDED_GLOB
-  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-  done
-fi
-
-# Install Homebrew
-if test ! $(which brew)
-then
-  echo "  Installing Homebrew for you."
-
-  # Install the correct homebrew for each OS type
-  if test "$(uname)" = "Darwin"
-  then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  elif test "$(expr substr $(uname -s) 1 5)" = "Linux"
-  then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
-  fi
-
-  # Update Homebrew recipes
-  brew update
-
-  # Install all our dependencies with bundle (See Brewfile)
-  brew tap homebrew/bundle
-fi
-
-# Install dependencies
-brew bundle --file="$dotfiles/Brewfile"
-
-sh "$dotfiles/link.sh"
-
-exit 0
+link "zsh/zshrc.zsh" ".zshrc"
